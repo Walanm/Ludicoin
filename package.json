@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 10000",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "next build && next export",
+    "start": "serve ./out"
   },
   "author": "",
   "license": "ISC",
