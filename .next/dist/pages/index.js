@@ -54,9 +54,6 @@ var _ludiex2 = _interopRequireDefault(_ludiex);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/walan/workspace/ludicoin/pages/index.js?entry';
-
-
 var LudicoinIndex = function (_Component) {
     (0, _inherits3.default)(LudicoinIndex, _Component);
 
@@ -183,62 +180,14 @@ var LudicoinIndex = function (_Component) {
     (0, _createClass3.default)(LudicoinIndex, [{
         key: 'renderCards',
         value: function renderCards() {
-            return _react2.default.createElement(_semanticUiReact.Card.Group, { centered: true, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 60
-                }
-            }, _react2.default.createElement(_semanticUiReact.Card, { onClick: this.onClick.bind(this, 0), error: (!!this.state.errorMessage).toString(),
-                color: 'blue', style: { 'backgroundColor': '#5386ED' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 62
-                }
-            }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h2', icon: true, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 64
-                }
-            }, _react2.default.createElement(_semanticUiReact.Icon, { circular: true, inverted: true, name: 'book', color: 'teal', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 65
-                }
-            }), 'Professor')), _react2.default.createElement(_semanticUiReact.Card, { onClick: this.onClick.bind(this, 1), color: 'blue', style: { 'backgroundColor': '#5386ED' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 70
-                }
-            }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h2', icon: true, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 71
-                }
-            }, _react2.default.createElement(_semanticUiReact.Icon, { circular: true, inverted: true, name: 'address book', color: 'red', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 72
-                }
-            }), 'Aluno')));
+            return _react2.default.createElement(_semanticUiReact.Card.Group, { centered: true }, _react2.default.createElement(_semanticUiReact.Card, { onClick: this.onClick.bind(this, 0), error: (!!this.state.errorMessage).toString(),
+                color: 'blue', style: { 'backgroundColor': '#5386ED' } }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h2', icon: true }, _react2.default.createElement(_semanticUiReact.Icon, { circular: true, inverted: true, name: 'book', color: 'teal' }), 'Professor')), _react2.default.createElement(_semanticUiReact.Card, { onClick: this.onClick.bind(this, 1), color: 'blue', style: { 'backgroundColor': '#5386ED' } }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h2', icon: true }, _react2.default.createElement(_semanticUiReact.Icon, { circular: true, inverted: true, name: 'address book', color: 'red' }), 'Aluno')));
         }
     }, {
         key: 'renderCadastros',
         value: function renderCadastros() {
-            return _react2.default.createElement(_semanticUiReact.Card.Group, { centered: true, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 84
-                }
-            }, _react2.default.createElement(_semanticUiReact.Card, { onClick: this.onClick.bind(this, 2), error: (!!this.state.errorMessage).toString(),
-                color: 'blue', style: { 'backgroundColor': '#b6e3ff' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 85
-                }
-            }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h3', textAlign: 'center', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 87
-                }
-            }, 'Novo professor')), _react2.default.createElement(_semanticUiReact.Card, { color: 'blue', onClick: this.onClick.bind(this, 3), style: { 'backgroundColor': '#b6e3ff' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 92
-                }
-            }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h3', textAlign: 'center', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 93
-                }
-            }, 'Novo aluno')));
+            return _react2.default.createElement(_semanticUiReact.Card.Group, { centered: true }, _react2.default.createElement(_semanticUiReact.Card, { onClick: this.onClick.bind(this, 2), error: (!!this.state.errorMessage).toString(),
+                color: 'blue', style: { 'backgroundColor': '#b6e3ff' } }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h3', textAlign: 'center' }, 'Novo professor')), _react2.default.createElement(_semanticUiReact.Card, { color: 'blue', onClick: this.onClick.bind(this, 3), style: { 'backgroundColor': '#b6e3ff' } }, _react2.default.createElement(_semanticUiReact.Header, { as: 'h3', textAlign: 'center' }, 'Novo aluno')));
         }
 
         // #b6e3ff
@@ -246,60 +195,7 @@ var LudicoinIndex = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { style: { 'backgroundColor': '#439cef', 'color': '#000000', 'min-height': '100vh' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 105
-                }
-            }, _react2.default.createElement(_Layout2.default, { carregando: this.state.loading, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 106
-                }
-            }, _react2.default.createElement('h3', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 107
-                }
-            }, _react2.default.createElement('center', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 107
-                }
-            }, 'Escolha o seu tipo de acesso:')), _react2.default.createElement(_semanticUiReact.Grid, { position: 'center', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 108
-                }
-            }, _react2.default.createElement(_semanticUiReact.Grid.Row, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 109
-                }
-            }, _react2.default.createElement(_semanticUiReact.Grid.Column, { width: 16, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 110
-                }
-            }, this.renderCards())), _react2.default.createElement(_semanticUiReact.Grid.Row, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 112
-                }
-            }, _react2.default.createElement(_semanticUiReact.Grid.Column, { width: 16, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 113
-                }
-            }, this.renderCadastros()), _react2.default.createElement(_semanticUiReact.Message, { hidden: !this.state.errorMessage, color: 'red', header: 'Erro!', content: this.state.errorMessage, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 114
-                }
-            })), _react2.default.createElement(_semanticUiReact.Grid.Row, { width: 38, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 117
-                }
-            }, _react2.default.createElement(_semanticUiReact.Grid.Column, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 118
-                }
-            })))));
+            return _react2.default.createElement('div', { style: { 'backgroundColor': '#439cef', 'color': '#000000', 'min-height': '100vh' } }, _react2.default.createElement(_Layout2.default, { carregando: this.state.loading }, _react2.default.createElement('h3', null, _react2.default.createElement('center', null, 'Escolha o seu tipo de acesso:')), _react2.default.createElement(_semanticUiReact.Grid, { position: 'center' }, _react2.default.createElement(_semanticUiReact.Grid.Row, null, _react2.default.createElement(_semanticUiReact.Grid.Column, { width: 16 }, this.renderCards())), _react2.default.createElement(_semanticUiReact.Grid.Row, null, _react2.default.createElement(_semanticUiReact.Grid.Column, { width: 16 }, this.renderCadastros()), _react2.default.createElement(_semanticUiReact.Message, { hidden: !this.state.errorMessage, color: 'red', header: 'Erro!', content: this.state.errorMessage })), _react2.default.createElement(_semanticUiReact.Grid.Row, { width: 38 }, _react2.default.createElement(_semanticUiReact.Grid.Column, null)))));
         }
     }]);
 
@@ -307,4 +203,3 @@ var LudicoinIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = LudicoinIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkdyaWQiLCJNZXNzYWdlIiwiSWNvbiIsIkhlYWRlciIsIkxheW91dCIsIkxpbmsiLCJSb3V0ZXIiLCJ3ZWIzIiwibHVkaWV4IiwiTHVkaWNvaW5JbmRleCIsInN0YXRlIiwiZXJyb3JNZXNzYWdlIiwibG9hZGluZyIsIm9uQ2xpY2siLCJpbmRpY2UiLCJldmVudCIsInByZXZlbnREZWZhdWx0Iiwic2V0U3RhdGUiLCJldGhlcmV1bSIsImVuYWJsZSIsImV0aCIsImdldEFjY291bnRzIiwiZW5kZXJlY29zIiwibWV0aG9kcyIsIm9idGVyUHJvZmVzc29yIiwiY2FsbCIsInByb2Zlc3NvciIsInB1c2hSb3V0ZSIsIm9idGVyQWx1bm8iLCJhbHVubyIsIm1lc3NhZ2UiLCJiaW5kIiwidG9TdHJpbmciLCJyZW5kZXJDYXJkcyIsInJlbmRlckNhZGFzdHJvcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTLEFBQU0sQUFBTSxBQUFTLEFBQU07O0FBQ3BDLEFBQU8sQUFBWTs7OztBQUNuQixBQUFTLEFBQU0sQUFBYzs7QUFDN0IsQUFBTyxBQUFVOzs7O0FBQ2pCLEFBQU8sQUFBWTs7Ozs7Ozs7O0ksQUFHYjs7Ozs7Ozs7Ozs7Ozs7OzhOLEFBQ0Y7MEJBQVEsQUFDVSxBQUNkO3FCQUZJLEFBRUssQTtBQUZMLEFBQ0osaUJBSUosQTtpR0FBVSxpQkFBQSxBQUFPLFFBQVAsQUFBZSxPQUFmOzBDQUFBOzhFQUFBOzhCQUFBO3lEQUFBO2lDQUNOO3NDQUFBLEFBQU0sQUFFTjs7c0NBQUEsQUFBSyxTQUFTLEVBQUUsY0FIVixBQUdOLEFBQWMsQUFBZ0I7O2dEQUh4QjtnREFBQTt1Q0FNSSxTQU5KLEFBTUksQUFBUzs7aUNBTmI7Z0RBQUE7dUNBT3NCLGNBQUEsQUFBSyxJQVAzQixBQU9z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QUFBLGtCQUNFLEFBQUMsa0NBQU8sWUFBWSxLQUFBLEFBQUssTUFBekIsQUFBK0I7OEJBQS9CO2dDQUFBLEFBQ0U7QUFERjsrQkFDRSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUFJO0FBQUo7QUFBQSwrQkFBSSxjQUFBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFETixBQUNFLEFBQUksQUFDSixtREFBQSxBQUFDLHVDQUFLLFVBQU4sQUFBZTs4QkFBZjtnQ0FBQSxBQUNFO0FBREY7K0JBQ0csY0FBRCxzQkFBQSxBQUFNOzs4QkFBTjtnQ0FBQSxBQUNFO0FBREY7QUFBQSwrQkFDRyxjQUFELHNCQUFBLEFBQU0sVUFBTyxPQUFiLEFBQW9COzhCQUFwQjtnQ0FBQSxBQUF5QjtBQUF6QjtvQkFGSixBQUNFLEFBQ0UsQUFBeUIsQUFBSyxBQUVoQyxpQ0FBQyxjQUFELHNCQUFBLEFBQU07OzhCQUFOO2dDQUFBLEFBQ0U7QUFERjtBQUFBLCtCQUNHLGNBQUQsc0JBQUEsQUFBTSxVQUFPLE9BQWIsQUFBb0I7OEJBQXBCO2dDQUFBLEFBQXlCO0FBQXpCO29CQURGLEFBQ0UsQUFBeUIsQUFBSyxBQUM5QixvQ0FBQSxBQUFDLDBDQUFRLFFBQVEsQ0FBQyxLQUFBLEFBQUssTUFBdkIsQUFBNkIsY0FBYyxPQUEzQyxBQUFpRCxPQUFNLFFBQXZELEFBQThELFNBQVEsU0FBUyxLQUFBLEFBQUssTUFBcEYsQUFBMEY7OEJBQTFGO2dDQU5KLEFBSUUsQUFFRSxBQUdBO0FBSEE7aUNBR0MsY0FBRCxzQkFBQSxBQUFNLE9BQUksT0FBVixBQUFpQjs4QkFBakI7Z0NBQUEsQUFDQTtBQURBOzZDQUNBLEFBQUMsc0JBQUQsQUFBTTs7OEJBQU47Z0NBZFIsQUFDQSxBQUNFLEFBRUUsQUFTSSxBQUNBLEFBUVg7QUFSVztBQUFBOzs7OztBQTdHWSxBLEFBMEg1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvd2FsYW4vd29ya3NwYWNlL2x1ZGljb2luIn0=

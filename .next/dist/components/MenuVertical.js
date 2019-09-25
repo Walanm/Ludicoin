@@ -34,9 +34,6 @@ var _routes = require('../routes');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/walan/workspace/ludicoin/components/MenuVertical.js';
-
-
 var MenuVertical = function (_Component) {
   (0, _inherits3.default)(MenuVertical, _Component);
 
@@ -72,44 +69,15 @@ var MenuVertical = function (_Component) {
 
       var activeItem = this.state.activeItem;
 
-      return _react2.default.createElement(_semanticUiReact.Menu, { color: 'teal', inverted: true, vertical: true, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        }
-      }, _react2.default.createElement(_semanticUiReact.Menu.Item, { header: true, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        }
-      }, _react2.default.createElement('center', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        }
-      }, 'Menu')), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'inicio', active: activeItem === 'inicio', onClick: function onClick(e) {
+      return _react2.default.createElement(_semanticUiReact.Menu, { color: 'teal', inverted: true, vertical: true }, _react2.default.createElement(_semanticUiReact.Menu.Item, { header: true }, _react2.default.createElement('center', null, 'Menu')), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'inicio', active: activeItem === 'inicio', onClick: function onClick(e) {
           return _this2.onClick(e, 0);
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        }
-      }, 'In\xEDcio'), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'disciplinas', active: activeItem === 'disciplinas', onClick: function onClick(e) {
+        } }, 'In\xEDcio'), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'disciplinas', active: activeItem === 'disciplinas', onClick: function onClick(e) {
           return _this2.onClick(e, 1);
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        }
-      }, 'Disciplinas'), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'turmas', active: activeItem === 'turmas', onClick: function onClick(e) {
+        } }, 'Disciplinas'), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'turmas', active: activeItem === 'turmas', onClick: function onClick(e) {
           return _this2.onClick(e, 2);
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44
-        }
-      }, 'Turmas'), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'professores', active: activeItem === 'professores', onClick: function onClick(e) {
+        } }, 'Turmas'), _react2.default.createElement(_semanticUiReact.Menu.Item, { name: 'professores', active: activeItem === 'professores', onClick: function onClick(e) {
           return _this2.onClick(e, 3);
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48
-        }
-      }, 'Professores'));
+        } }, 'Professores'));
     }
   }]);
 
@@ -117,4 +85,3 @@ var MenuVertical = function (_Component) {
 }(_react.Component);
 
 exports.default = MenuVertical;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTWVudVZlcnRpY2FsLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiSW5wdXQiLCJMYWJlbCIsIk1lbnUiLCJCdXR0b24iLCJMaW5rIiwiUm91dGVyIiwiTWVudVZlcnRpY2FsIiwic3RhdGUiLCJhY3RpdmVJdGVtIiwiZXZlbnQiLCJpbmRpY2UiLCJjb25zb2xlIiwibG9nIiwicm90YSIsInByb3BzIiwiZW5kZXJlY28iLCJ3aW5kb3ciLCJsb2NhdGlvbiIsInBhdGhuYW1lIiwiY2FycmVnYXIiLCJjYWxsIiwicHVzaFJvdXRlIiwib25DbGljayIsImUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVMsQUFBTyxBQUFPLEFBQU07O0FBQzdCLEFBQVMsQUFBTSxBQUFjOzs7Ozs7O0lBR1IsQTs7Ozs7Ozs7Ozs7Ozs7d05BR25CLEEsUUFBUSxFQUFFLFksQUFBRixBQUFjOzs7Ozs0QkFFZCxBLE9BQU8sQSxRQUFRLEFBQ3JCO2NBQUEsQUFBUSxJQUFSLEFBQVksQUFDWjtVQUFJLFlBQUosQUFDQTtVQUFHLFVBQUgsQUFBYSxHQUNYLHVCQUFxQixLQUFBLEFBQUssTUFENUIsQUFDRSxBQUFnQyxjQUM3QixJQUFJLFVBQUosQUFBYyxHQUNqQix1QkFBcUIsS0FBQSxBQUFLLE1BQTFCLEFBQWdDLFdBRDdCLHlCQUVBLElBQUksVUFBSixBQUFjLEdBQ2pCLHVCQUFxQixLQUFBLEFBQUssTUFBMUIsQUFBZ0MsV0FEN0Isb0JBRUEsSUFBSSxVQUFKLEFBQWMsR0FDakIsdUJBQXFCLEtBQUEsQUFBSyxNQUExQixBQUFnQyxXQUVsQzs7VUFBSSxRQUFRLE9BQUEsQUFBTyxTQUFuQixBQUE0QixVQUMxQixLQUFBLEFBQUssTUFBTCxBQUFXLFNBQVgsQUFBb0IsQUFFdEI7O3FCQUFBLEFBQU8sVUFBUCxBQUFpQixBQUNsQjs7Ozs2QkFFUTttQkFBQTs7VUFBQSxBQUNDLGFBQWUsS0FEaEIsQUFDcUIsTUFEckIsQUFDQyxBQUVSOzs2QkFDRSxBQUFDLHVDQUFLLE9BQU4sQUFBYSxRQUFRLFVBQXJCLE1BQThCLFVBQTlCO29CQUFBO3NCQUFBLEFBQ0U7QUFERjtPQUFBLGtCQUNHLGNBQUQsc0JBQUEsQUFBTSxRQUFLLFFBQVg7b0JBQUE7c0JBQUEsQUFBa0I7QUFBbEI7eUJBQWtCLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURwQixBQUNFLEFBQWtCLEFBRWQsMEJBQUMsY0FBRCxzQkFBQSxBQUFNLFFBQUssTUFBWCxBQUFnQixVQUFTLFFBQVEsZUFBakMsQUFBZ0QsVUFBVSxTQUFTLG9CQUFBO2lCQUFLLE9BQUEsQUFBSyxRQUFMLEFBQWEsR0FBbEIsQUFBSyxBQUFnQjtBQUF4RjtvQkFBQTtzQkFBQTtBQUFBO1NBSE4sQUFHTSxBQUlGLDhCQUFDLGNBQUQsc0JBQUEsQUFBTSxRQUFLLE1BQVgsQUFBZ0IsZUFBYyxRQUFRLGVBQXRDLEFBQXFELGVBQWUsU0FBUyxvQkFBQTtpQkFBSyxPQUFBLEFBQUssUUFBTCxBQUFhLEdBQWxCLEFBQUssQUFBZ0I7QUFBbEc7b0JBQUE7c0JBQUE7QUFBQTtTQVBKLEFBT0ksQUFJQSxnQ0FBQyxjQUFELHNCQUFBLEFBQU0sUUFBSyxNQUFYLEFBQWdCLFVBQVMsUUFBUSxlQUFqQyxBQUFnRCxVQUFVLFNBQVMsb0JBQUE7aUJBQUssT0FBQSxBQUFLLFFBQUwsQUFBYSxHQUFsQixBQUFLLEFBQWdCO0FBQXhGO29CQUFBO3NCQUFBO0FBQUE7U0FYSixBQVdJLEFBSUEsMkJBQUMsY0FBRCxzQkFBQSxBQUFNLFFBQUssTUFBWCxBQUFnQixlQUFjLFFBQVEsZUFBdEMsQUFBcUQsZUFBZSxTQUFTLG9CQUFBO2lCQUFLLE9BQUEsQUFBSyxRQUFMLEFBQWEsR0FBbEIsQUFBSyxBQUFnQjtBQUFsRztvQkFBQTtzQkFBQTtBQUFBO1NBaEJOLEFBQ0UsQUFlSSxBQU1QOzs7OztBQWhEdUMsQTs7a0JBQXJCLEEiLCJmaWxlIjoiTWVudVZlcnRpY2FsLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy93YWxhbi93b3Jrc3BhY2UvbHVkaWNvaW4ifQ==

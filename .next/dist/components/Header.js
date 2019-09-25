@@ -38,9 +38,6 @@ var _routes = require('../routes');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/walan/workspace/ludicoin/components/Header.js';
-
-
 var Header = function (_Component) {
   (0, _inherits3.default)(Header, _Component);
 
@@ -67,45 +64,11 @@ var Header = function (_Component) {
       var color = this.props.color;
       var activeItem = this.state.activeItem;
 
-      return _react2.default.createElement(_semanticUiReact.Menu, { style: { marginTop: '0px' }, color: 'blue', inverted: true, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        }
-      }, _react2.default.createElement(_routes.Link, { route: '/', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        }
-      }, _react2.default.createElement('a', { className: 'item', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        }
-      }, _react2.default.createElement('b', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        }
-      }, 'Ludicoin'))), _react2.default.createElement(_semanticUiReact.Menu.Menu, { position: 'right', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        }
-      }, _react2.default.createElement(_routes.Link, { route: '/', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        }
-      }, _react2.default.createElement('a', { className: 'item', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        }
-      }, 'In\xEDcio'))));
+      return _react2.default.createElement(_semanticUiReact.Menu, { style: { marginTop: '0px' }, color: 'blue', inverted: true }, _react2.default.createElement(_routes.Link, { route: '/' }, _react2.default.createElement('a', { className: 'item' }, _react2.default.createElement('b', null, 'Ludicoin'))), _react2.default.createElement(_semanticUiReact.Menu.Menu, { position: 'right' }, _react2.default.createElement(_routes.Link, { route: '/' }, _react2.default.createElement('a', { className: 'item' }, 'In\xEDcio'))));
     }
   }]);
 
   return Header;
 }(_react.Component);
 
-Header.propTypes = {
-  color: _propTypes2.default.string
-};
-
 exports.default = Header;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvSGVhZGVyLmpzIl0sIm5hbWVzIjpbIlByb3BUeXBlcyIsIlJlYWN0IiwiQ29tcG9uZW50IiwiTWVudSIsIkxpbmsiLCJIZWFkZXIiLCJzdGF0ZSIsImFjdGl2ZUl0ZW0iLCJoYW5kbGVJdGVtQ2xpY2siLCJlIiwibmFtZSIsInNldFN0YXRlIiwiY29sb3IiLCJwcm9wcyIsIm1hcmdpblRvcCIsInByb3BUeXBlcyIsInN0cmluZyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPOzs7O0FBQ1AsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVM7O0FBQ1QsQUFBUyxBQUFZOzs7Ozs7O0lBRWYsQTs7Ozs7Ozs7Ozs7Ozs7NE0sQUFLSixRQUFRLEVBQUUsWUFBRixBQUFjLEEsZ0IsQUFFdEIsa0JBQWtCLFVBQUEsQUFBQyxVQUFEO1VBQUEsQUFBTSxhQUFOLEFBQU07YUFBVyxNQUFBLEFBQUssU0FBUyxFQUFFLFlBQWpDLEFBQWlCLEFBQWMsQUFBYztBOzs7Ozs2QkFFdEQ7VUFBQSxBQUNDLFFBQVUsS0FEWCxBQUNnQixNQURoQixBQUNDO1VBREQsQUFFQyxhQUFlLEtBRmhCLEFBRXFCLE1BRnJCLEFBRUMsQUFFUjs7NkJBQ0UsQUFBQyx1Q0FBSyxPQUFPLEVBQUUsV0FBZixBQUFhLEFBQWEsU0FBUyxPQUFuQyxBQUEwQyxRQUFRLFVBQWxEO29CQUFBO3NCQUFBLEFBQ0U7QUFERjtPQUFBLGtCQUNFLEFBQUMsOEJBQUssT0FBTixBQUFZO29CQUFaO3NCQUFBLEFBQ0U7QUFERjt5QkFDRSxjQUFBLE9BQUcsV0FBSCxBQUFhO29CQUFiO3NCQUFBLEFBQW9CO0FBQXBCO3lCQUFvQixjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FGeEIsQUFDRSxBQUNFLEFBQW9CLEFBR3RCLCtCQUFDLGNBQUQsc0JBQUEsQUFBTSxRQUFLLFVBQVgsQUFBb0I7b0JBQXBCO3NCQUFBLEFBQ0U7QUFERjt5QkFDRSxBQUFDLDhCQUFLLE9BQU4sQUFBWTtvQkFBWjtzQkFBQSxBQUNFO0FBREY7eUJBQ0UsY0FBQSxPQUFHLFdBQUgsQUFBYTtvQkFBYjtzQkFBQTtBQUFBO1NBUlIsQUFDRSxBQUtFLEFBQ0UsQUFDRSxBQU1UOzs7OztBLEFBM0JrQjs7QSxBQUFmLE8sQUFDRztTQUNFLG9CQURVLEFBQ0EsQSxBQTRCckI7QUE3QnFCLEFBQ2pCOztrQkE0QkosQUFBZSIsImZpbGUiOiJIZWFkZXIuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3dhbGFuL3dvcmtzcGFjZS9sdWRpY29pbiJ9

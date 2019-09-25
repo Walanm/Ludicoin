@@ -48,9 +48,6 @@ var _semanticUiReact = require('semantic-ui-react');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/walan/workspace/ludicoin/pages/professor/indexProfessor.js?entry';
-
-
 var IndexProfessor = function (_Component) {
     (0, _inherits3.default)(IndexProfessor, _Component);
 
@@ -84,95 +81,7 @@ var IndexProfessor = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement(_LayoutProfessor2.default, { endereco: this.props.conta, action: this.carregar.bind(this), loading: this.state.loading, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 43
-                }
-            }, _react2.default.createElement('h2', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 44
-                }
-            }, this.props.entidade), _react2.default.createElement('hr', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 44
-                }
-            }), _react2.default.createElement('h1', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 45
-                }
-            }, _react2.default.createElement('center', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 45
-                }
-            }, _react2.default.createElement('b', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 45
-                }
-            }, 'PERFIL'))), _react2.default.createElement('p', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 46
-                }
-            }, _react2.default.createElement('b', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 46
-                }
-            }, 'Nome:'), ' ', this.props.nome), _react2.default.createElement('p', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 47
-                }
-            }, _react2.default.createElement('b', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 47
-                }
-            }, 'Conta:'), ' ', this.props.conta), _react2.default.createElement('p', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 48
-                }
-            }, _react2.default.createElement('b', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 48
-                }
-            }, 'CPF:'), ' ', this.formatarCPF(this.props.cpf)), _react2.default.createElement('p', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 49
-                }
-            }, _react2.default.createElement('b', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 49
-                }
-            }, 'Cadastro:'), ' ', this.props.cadastro), _react2.default.createElement('p', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 50
-                }
-            }, _react2.default.createElement('b', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 50
-                }
-            }, 'Departamento:'), ' ', this.props.departamento), _react2.default.createElement(_semanticUiReact.Form, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 51
-                }
-            }, _react2.default.createElement(_semanticUiReact.Button, { style: { marginBottom: '10px' }, color: 'yellow', floated: 'right', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 51
-                }
-            }, 'Bem-vindo!')));
+            return _react2.default.createElement(_LayoutProfessor2.default, { endereco: this.props.conta, action: this.carregar.bind(this), loading: this.state.loading }, _react2.default.createElement('h2', null, this.props.entidade), _react2.default.createElement('hr', null), _react2.default.createElement('h1', null, _react2.default.createElement('center', null, _react2.default.createElement('b', null, 'PERFIL'))), _react2.default.createElement('p', null, _react2.default.createElement('b', null, 'Nome:'), ' ', this.props.nome), _react2.default.createElement('p', null, _react2.default.createElement('b', null, 'Conta:'), ' ', this.props.conta), _react2.default.createElement('p', null, _react2.default.createElement('b', null, 'CPF:'), ' ', this.formatarCPF(this.props.cpf)), _react2.default.createElement('p', null, _react2.default.createElement('b', null, 'Cadastro:'), ' ', this.props.cadastro), _react2.default.createElement('p', null, _react2.default.createElement('b', null, 'Departamento:'), ' ', this.props.departamento), _react2.default.createElement(_semanticUiReact.Form, null, _react2.default.createElement(_semanticUiReact.Button, { style: { marginBottom: '10px' }, color: 'yellow', floated: 'right' }, 'Bem-vindo!')));
         }
     }], [{
         key: 'getInitialProps',
@@ -226,4 +135,3 @@ var IndexProfessor = function (_Component) {
 ;
 
 exports.default = IndexProfessor;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL3Byb2Zlc3Nvci9pbmRleFByb2Zlc3Nvci5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsImx1ZGlleCIsIkxheW91dFByb2Zlc3NvciIsIkJ1dHRvbiIsIkZvcm0iLCJJbmRleFByb2Zlc3NvciIsInN0YXRlIiwibG9hZGluZyIsInNldFN0YXRlIiwiZW50cmFkYSIsImNwZlN0ciIsInRvU3RyaW5nIiwiaXNOYU4iLCJsZW5ndGgiLCJyZXBlYXQiLCJzbGljZSIsInByb3BzIiwiY29udGEiLCJjYXJyZWdhciIsImJpbmQiLCJlbnRpZGFkZSIsIm5vbWUiLCJmb3JtYXRhckNQRiIsImNwZiIsImNhZGFzdHJvIiwiZGVwYXJ0YW1lbnRvIiwibWFyZ2luQm90dG9tIiwicXVlcnkiLCJlbmRlcmVjbyIsIm1ldGhvZHMiLCJub21lRW50aWRhZGUiLCJjYWxsIiwib2J0ZXJQcm9mZXNzb3IiLCJwcm9mZXNzb3IiLCJ0b051bWJlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPLEFBQVk7Ozs7QUFDbkIsQUFBTyxBQUFxQjs7OztBQUM1QixBQUFRLEFBQVM7Ozs7Ozs7SUFHWCxBOzs7Ozs7Ozs7Ozs7OztnTyxBQWtCRixRQUFRLEVBQUUsU0FBRixBQUFXLEE7Ozs7O21DQUVSLEFBQ1A7aUJBQUEsQUFBSyxTQUFTLEVBQUUsU0FBaEIsQUFBYyxBQUFXLEFBQzVCOzs7O29DQUlXLEEsU0FBUyxBQUNqQjtnQkFBSSxTQUFTLFFBQWIsQUFBYSxBQUFRLEFBQ3JCO2dCQUFHLENBQUMsTUFBRCxBQUFDLEFBQU0sV0FBVyxPQUFBLEFBQU8sU0FBNUIsQUFBcUMsSUFDakMsU0FBUyxJQUFBLEFBQUksT0FBTyxLQUFLLE9BQWhCLEFBQXVCLFVBQWhDLEFBQTBDLEFBQzlDO3FCQUFTLE9BQUEsQUFBTyxNQUFQLEFBQWEsR0FBYixBQUFlLEtBQWYsQUFBb0IsTUFB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
