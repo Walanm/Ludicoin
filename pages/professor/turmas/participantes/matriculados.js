@@ -55,7 +55,7 @@ class MostrarMatriculados extends Component {
                 description: (
                     <div>
                         <p style={{"textAlign": "left"}}>
-                            Matrícula: {element[1]}
+                            Matrícula: {element[2]}
                             <span style={{"float": "right"}}>
                             Curso: {element[3]}
                             </span>

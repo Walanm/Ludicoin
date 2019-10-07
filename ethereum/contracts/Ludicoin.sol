@@ -1,8 +1,8 @@
 pragma solidity ^0.4.17;
 
-contract posse {
+contract Posse {
     address public proprietario;
-    function posse() public {
+    function Posse() public {
         proprietario = msg.sender;
     }
     modifier somenteProprietario {
@@ -100,9 +100,8 @@ contract TokenERC20 {
 /*       Token name: LUDICOIN
 */
 /******************************************/
-contract Ludicoin is posse, TokenERC20 {
-    uint256 public sellPrice;
-    uint256 public buyPrice;
+contract Ludicoin is Posse, TokenERC20 {
+
     mapping (address => bool) public frozenAccount;
 
     event FrozenFunds(address target, bool frozen);
@@ -135,11 +134,6 @@ contract Ludicoin is posse, TokenERC20 {
     
     function transfer(address _to, uint256 _value) public somenteProprietario returns (bool success) {
         return super.transfer(_to, _value);
-    }
-    
-    function setPrices(uint256 newSellPrice, uint256 newBuyPrice) somenteProprietario public {
-        sellPrice = newSellPrice;
-        buyPrice = newBuyPrice;
     }
     
     function gastar(address usuario, uint valor) public somenteProprietario {

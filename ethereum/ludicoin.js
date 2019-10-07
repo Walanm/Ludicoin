@@ -3,7 +3,7 @@ import Ludicoin from './build/Ludicoin.json';
 
 const instancia = new web3.eth.Contract (
     JSON.parse(Ludicoin.interface),
-    '0x36b75Da7206baeBE343ff0Ab27693C6d383Fb799'
+    '0xdc9d659f520BA0f9a0f0d49342c2d13038109A80'
 );
 
 export default instancia;

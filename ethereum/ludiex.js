@@ -3,7 +3,7 @@ import LudiEx from './build/LudiEx.json';
 
 const instancia = new web3.eth.Contract (
     JSON.parse(LudiEx.interface),
-    '0x1Cc92F7907e7AE54EA330d0375b3B4138B8E6cfC'
+    '0x6cd1F3A2E5d81d482b1B894351FD29089eFd8703'
 );
 
 export default instancia;

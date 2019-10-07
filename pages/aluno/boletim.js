@@ -94,7 +94,7 @@ class Boletim extends Component {
 
     colorirNota(indice, nota) {
         if(this.props.bonusLudicoinUnidades[indice] > 0) {
-            return <font color="green">{nota}</font>
+            return <font color="#61D871">{nota}</font>
         } else {
             return nota
         }
