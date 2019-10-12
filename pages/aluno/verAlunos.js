@@ -4,9 +4,13 @@ import { Link } from '../../routes';
 import ludiex from '../../ethereum/ludiex';
 import Layout from '../../components/Layout';
 
+/*
+    Mostra alunos participantes de uma turma
+*/
 
 class VerAlunos extends Component {
     
+    // Relaciona Turma com uma lista de Alunos
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

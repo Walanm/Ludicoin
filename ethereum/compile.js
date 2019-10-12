@@ -1,3 +1,8 @@
+/*
+    Script para a compilação dos contratos  
+    Salva a ABI e o bytecode dos contratos em arquivos JSON na pasta /ethereum/build.
+*/
+
 const path = require('path');
 const solc = require('solc');
 const fs = require('fs-extra');

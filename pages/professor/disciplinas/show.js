@@ -4,10 +4,13 @@ import { Link, Router } from '../../../routes';
 import ludiex from '../../../ethereum/ludiex';
 import LayoutProfessor from '../../../components/LayoutProfessor';
 
-
+/*
+    Página que lista todas as disciplinas cadastradas
+*/
 
 class DisciplinaShow extends Component {
     
+    // Carrega dados das disciplinas
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

@@ -5,10 +5,14 @@ import ludiex from '../../ethereum/ludiex';
 import Layout from '../../components/Layout';
 import web3 from '../../ethereum/web3';
 
+/*
+    Página para realizar matrícula do aluno nas turmas das disciplinas
+*/
 
 
 class MatriculaAluno extends Component {
     
+    // Relaciona disciplinas, professores e turmas
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

@@ -5,17 +5,11 @@ import web3 from '../ethereum/web3';
 import { Router, Link } from '../routes';
 import ludiex from '../ethereum/ludiex';
 
-class CadastroProfessor extends Component {
-    
-    static async getInitialProps(props) {
-        const conta = props.query.endereco;
-        const entidade = await ludiex.methods.nomeEntidade().call();
+/*
+    Página de cadastro de professor
+*/
 
-        return {
-            conta: conta,
-            nome: entidade,
-        };
-    }
+class CadastroProfessor extends Component {
 
     state = {
         nomeProfessor: '',

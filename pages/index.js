@@ -5,6 +5,9 @@ import { Link, Router } from "../routes";
 import web3 from '../ethereum/web3';
 import ludiex from '../ethereum/ludiex'; 
 
+/*
+    Página inicial da aplicação web
+*/
 
 class LudicoinIndex extends Component {
     state = {

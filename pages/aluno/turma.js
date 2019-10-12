@@ -6,9 +6,16 @@ import ludicoin from '../../ethereum/ludicoin';
 import Layout from '../../components/Layout';
 import web3 from '../../ethereum/web3';
 
+/*
+    Mostra informações da turma que o aluno participa, atividades, notas recebidas,
+    notas nas unidades e média do aluno
+*/
+
 
 class Turma extends Component {
     
+    // Carrega dados da blockchain
+    // Relaciona Aluno, Turma, Atividades e Unidades para mostrar todos dados relacionados
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();
@@ -100,26 +107,6 @@ class Turma extends Component {
         bonusLudicoinUnidades.map((element) => {
             bonusLudicoinNumber.push(element.toNumber());
         });
-
-        /*
-        let unidadesID = [];
-        let indice = 0;
-        for(let i = 0; i < this.props.quantidadeUnidades; i++){
-            for(let j = 0; j < i; j++)
-                indice += this.props.atividadesPorUnidade[i];
-            unidadesID.push(atividades[indice][1]);
-        }*/
-
-
-
-        /*
-        let notaUnidade = await Promise.all(
-            Array(parseInt(quantidadeUnidades.length))
-                .fill()
-                .map((element, index) => {
-                    return ludiex.methods.notaUnidade(conta, conta).call();
-                })
-        );*/
 
         return {
             conta: conta,

@@ -5,8 +5,14 @@ import LayoutProfessor from '../../../components/LayoutProfessor';
 import { Router, Link } from '../../../routes';
 import web3 from '../../../ethereum/web3';
 
+/*
+    Página que lista solicitações/requisições de professores para participar do Ludicoin
+    O professor participante pode aceitar a solicitação/requisição
+*/
+
 class AceitarProfessor extends Component {
     
+    // Carrega dados das requisições para novos professores
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

@@ -5,10 +5,15 @@ import ludiex from '../../ethereum/ludiex';
 import Layout from '../../components/Layout';
 import web3 from '../../ethereum/web3';
 
+/*
+    Página com as notas do aluno em todas as turmas que ele participou
+*/
 
 
 class Boletim extends Component {
     
+    // Carrega dados da blockchain 
+    // E faz a relação entre aluno, turmas que participou e notas nas unidades
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

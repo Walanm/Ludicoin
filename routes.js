@@ -1,3 +1,6 @@
+/*
+    Define as rotas de navegação de páginas web
+*/
 const routes = require('next-routes')();
 
 routes

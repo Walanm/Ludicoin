@@ -4,9 +4,13 @@ import { Link } from '../../../routes';
 import ludiex from '../../../ethereum/ludiex';
 import LayoutProfessor from '../../../components/LayoutProfessor';
 
+/*
+    Página que lista todos os professores participantes
+*/
 
 class MostrarProfessores extends Component {
     
+    // Carrega dados dos professores
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

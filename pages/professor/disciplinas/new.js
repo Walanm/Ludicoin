@@ -5,6 +5,10 @@ import web3 from '../../../ethereum/web3';
 import { Router, Link } from '../../../routes';
 import ludiex from '../../../ethereum/ludiex';
 
+/*
+    Página para cadastro de nova disciplina
+*/
+
 class DisciplinaNova extends Component {
     
     static async getInitialProps(props) {

@@ -1,3 +1,7 @@
+/*
+    Script para fazer teste de tempo de validação de transação.
+*/
+
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledLudicoin = require('./build/Ludicoin.json');

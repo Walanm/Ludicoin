@@ -5,8 +5,14 @@ import LayoutProfessor from '../../../../components/LayoutProfessor';
 import { Router, Link } from '../../../../routes';
 import web3 from '../../../../ethereum/web3';
 
+/*
+    Página para aceitação de matrícula de um aluno em uma turma
+    Lista todas as solicitações de matrícula nessa turma
+*/
+
 class MatriculaNaTurma extends Component {
     
+    // Carrega lista de dados de alunos que solicitaram matrícula na turma
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

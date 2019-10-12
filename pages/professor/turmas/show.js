@@ -5,10 +5,13 @@ import ludiex from '../../../ethereum/ludiex';
 import LayoutProfessor from '../../../components/LayoutProfessor';
 import { Router } from "../../../routes";
 
-
+/*
+    Página que lista as turmas do professor
+*/
 
 class MostrarTurmas extends Component {
     
+    // Carrega dados das turmas e suas respectivas disciplinas
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

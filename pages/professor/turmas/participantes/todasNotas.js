@@ -5,10 +5,13 @@ import ludiex from '../../../../ethereum/ludiex';
 import LayoutProfessor from '../../../../components/LayoutProfessor';
 import web3 from '../../../../ethereum/web3';
 
-
+/*
+    Página que lista as notas de todos os alunos nas unidades da Turma
+*/
 
 class TodasNotas extends Component {
     
+    // Carrega e relaciona dados de Turma, Unidades e Alunos
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

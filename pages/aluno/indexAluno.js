@@ -6,10 +6,16 @@ import ludicoin from '../../ethereum/ludicoin';
 import Layout from '../../components/Layout';
 import { Router } from "../../routes";
 
+/*
+    Página inicial do aluno
+    Mostra dados do aluno, turmas que participa e quantidade de Ludicoins
+*/
 
 
 class IndexAluno extends Component {
     
+    // Carrega dados da blockchain
+    // E relaciona aluno, turmas e Ludicoins
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

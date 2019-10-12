@@ -5,8 +5,13 @@ import web3 from '../../../ethereum/web3';
 import { Router, Link } from '../../../routes';
 import ludiex from '../../../ethereum/ludiex';
 
+/*
+    Página para atualização dos dados de uma turma
+*/
+
 class TurmaEdicao extends Component {
     
+    // Carrega dados da turma
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

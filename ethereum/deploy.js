@@ -1,3 +1,7 @@
+/*
+    Script para a implantação dos contratos na blockchain.
+*/
+
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledLudicoin = require('./build/Ludicoin.json');
@@ -28,7 +32,7 @@ const deploy = async () => {
     const contratoLudiEx = await new web3.eth.Contract(JSON.parse(compiledLudiEx.interface))
     .deploy({ 
             data: compiledLudiEx.bytecode,
-            arguments:['UFS', contratoLudicoin.options.address]
+            arguments:['Universidade Federal de Sergipe', contratoLudicoin.options.address]
      })
     .send({ gas: '6500000', from: accounts[0] });
 
@@ -48,7 +52,7 @@ const deploy = async () => {
         contratoLudiEx.options.address
     );
 
-    await instanciaLudiEx.methods.inicializar("Walan Marcel Teles Oliveira", 6261099570, 1, "Computação")
+    await instanciaLudiEx.methods.inicializar("José Luís Alves Teixeira", 6161399570, 1, "Computação")
                                  .send({ gas: '193156', from: accounts[0] });
 
     console.log('Professor inicial criado');

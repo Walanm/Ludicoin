@@ -3,11 +3,14 @@ import ludiex from '../../ethereum/ludiex';
 import LayoutProfessor from '../../components/LayoutProfessor';
 import {Button,  Form } from 'semantic-ui-react';
 
+/*
+    Página inicial do professor
+    Apenas mostra dados do professor
+*/
 
 class IndexProfessor extends Component {
     
     static async getInitialProps(props) {
-        //this.carregar = this.carregar.bind(this);
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();
         const professor = await ludiex.methods.obterProfessor(conta).call();

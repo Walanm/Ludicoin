@@ -1,3 +1,5 @@
+// Define o servidor next.js utilizado
+
 const { createServer } = require('http');
 const next = require('next');
 

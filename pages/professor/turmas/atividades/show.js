@@ -5,9 +5,12 @@ import ludiex from '../../../../ethereum/ludiex';
 import LayoutProfessor from '../../../../components/LayoutProfessor';
 import web3 from '../../../../ethereum/web3';
 
-
+/*
+    Página que mostra dados da turma e lista as atividades cobradas
+*/
 class MostrarAtividades extends Component {
     
+    // Carrega e combina dados da Turma, Unidades e Atividades
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

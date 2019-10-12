@@ -1,5 +1,9 @@
 pragma solidity ^0.4.17;
 
+
+/*       
+    Define privilégio de acesso para 'proprietario' do contrato
+*/
 contract Posse {
     address public proprietario;
     function Posse() public {
@@ -14,63 +18,74 @@ contract Posse {
     }
 }
 
+/*       
+    Implementa os métodos da interface do padrão ERC-20
+*/
 contract TokenERC20 {
+    // Variáveis públicas do token
     string public name;
     string public symbol;
     uint8 public decimals = 18;
 
     uint256 public totalSupply;
 
+    // Cria um array com todos os saldos
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
 
+    // Geram evento público para notificar participantes da blockchain
     event Transfer(address indexed from, address indexed to, uint256 value);
-    
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
-
     event Burn(address indexed from, uint256 value);
-
+    
+    /**
+     * Construtor: inicializa contrato com tokens iniciais dados ao criador do contrato
+     */
     function TokenERC20(
         uint256 initialSupply,
         string tokenName,
         string tokenSymbol
     ) public {
-        totalSupply = initialSupply * 10 ** uint256(decimals);  
-        balanceOf[msg.sender] = totalSupply;                
-        name = tokenName;                                   
-        symbol = tokenSymbol;                               
+        totalSupply = initialSupply * 10 ** uint256(decimals);  // atualiza a oferta total de tokens
+        balanceOf[msg.sender] = totalSupply; // dá tokens iniciais ao criador do contrato               
+        name = tokenName; // define o nome do token                                   
+        symbol = tokenSymbol; // define abreviação/símbolo do token                         
     }
 
+    // Transferência interna, pode ser chamado apenas por esse contrato
     function _transfer(address _from, address _to, uint _value) internal {
-        
+        // Impede transferência para o endereço 0x0
         require(_to != 0x0);
-        
+        // Verifica se o remetente tem o suficiente
         require(balanceOf[_from] >= _value);
-
+        // Impede overflow 
         require(balanceOf[_to] + _value > balanceOf[_to]);
-
+        // Salva este valor para teste futuro
         uint previousBalances = balanceOf[_from] + balanceOf[_to];
-
+        // Subtrai do saldo do remetente
         balanceOf[_from] -= _value;
-
+        // Adiciona o mesmo valor do destinatário
         balanceOf[_to] += _value;
         Transfer(_from, _to, _value);
-
+        // Testa se o resultado está correto
         assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
     }
 
+    // Transfere tokens
     function transfer(address _to, uint256 _value) public returns (bool success) {
         _transfer(msg.sender, _to, _value);
         return true;
     }
 
+    // Transfere um valor permitido de tokens de outra conta
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-        require(_value <= allowance[_from][msg.sender]);     // Check allowance
+        require(_value <= allowance[_from][msg.sender]);
         allowance[_from][msg.sender] -= _value;
         _transfer(_from, _to, _value);
         return true;
     }
 
+    // Permite uma conta '_spender' poder retirar um certo valor da sua conta
     function approve(address _spender, uint256 _value) public
         returns (bool success) {
         allowance[msg.sender][_spender] = _value;
@@ -78,36 +93,48 @@ contract TokenERC20 {
         return true;
     }
 
+    // Destrói tokens 
     function burn(uint256 _value) public returns (bool success) {
-        require(balanceOf[msg.sender] >= _value);   // Check if the sender has enough
-        balanceOf[msg.sender] -= _value;            // Subtract from the sender
-        totalSupply -= _value;                      // Updates totalSupply
+        require(balanceOf[msg.sender] >= _value);   // Verifica se o rementente da transação tem o suficiente
+        balanceOf[msg.sender] -= _value;            // Subtrai do remetente
+        totalSupply -= _value;                      // Atualiza a oferta total de tokens
         Burn(msg.sender, _value);
         return true;
     }
 
+    // Destrói tokens de outra conta
     function burnFrom(address _from, uint256 _value) public returns (bool success) {
-        require(balanceOf[_from] >= _value);                // Check if the targeted balance is enough
-        require(_value <= allowance[_from][msg.sender]);    // Check allowance
-        balanceOf[_from] -= _value;                         // Subtract from the targeted balance
-        allowance[_from][msg.sender] -= _value;             // Subtract from the sender's allowance
-        totalSupply -= _value;                              // Update totalSupply
+        require(balanceOf[_from] >= _value);                // Verifica se o alvo tem o suficiente
+        require(_value <= allowance[_from][msg.sender]);    // Verifica se isso foi permitido pelo alvo
+        balanceOf[_from] -= _value;                         // Subtrai do saldo do alvo
+        allowance[_from][msg.sender] -= _value;             // Subtrai do limite de valor permitido pelo alvo
+        totalSupply -= _value;                              // Atualiza a oferta total de tokens
         Burn(_from, _value);
         return true;
     }
 }
+
 /******************************************/
-/*       Token name: LUDICOIN
+/*       Token LUDICOIN
+         Define métodos específicos do token para além do padrão ERC-20 
 */
 /******************************************/
 contract Ludicoin is Posse, TokenERC20 {
 
+    // array de contas 'congeladas'
     mapping (address => bool) public frozenAccount;
 
     event FrozenFunds(address target, bool frozen);
 
+    /*
+        Inicializa o contrato com:
+        Oferta inicial: 0 tokens
+        Nome: Ludicoin
+        Símbolo: LDC
+    */
     function Ludicoin() TokenERC20(0, "Ludicoin", "LDC") public {}
 
+    // Sobrescreve '_transfer'
     function _transfer(address _from, address _to, uint _value) internal {
         require (_to != 0x0);                               
         require (balanceOf[_from] >= _value);               
@@ -119,7 +146,7 @@ contract Ludicoin is Posse, TokenERC20 {
         Transfer(_from, _to, _value);
     }
 
-
+    // Emite tokens e os dá a uma conta-alvo
     function mintToken(address target, uint256 mintedAmount) public somenteProprietario {
         balanceOf[target] += mintedAmount;
         totalSupply += mintedAmount;
@@ -127,26 +154,40 @@ contract Ludicoin is Posse, TokenERC20 {
         Transfer(this, target, mintedAmount);
     }
 
+    // Congela uma conta, impedindo-a de fazer movimentações
     function freezeAccount(address target, bool freeze) public somenteProprietario{
         frozenAccount[target] = freeze;
         FrozenFunds(target, freeze);
     }
     
+    // Restringe a permissão de fazer transferências a somente o 'proprietário' do contrato
     function transfer(address _to, uint256 _value) public somenteProprietario returns (bool success) {
         return super.transfer(_to, _value);
     }
     
+    // Permite o contrato proprietário fazer um usúario 'gastar' ludicoins
     function gastar(address usuario, uint valor) public somenteProprietario {
         _transfer(usuario, msg.sender, valor);
     }
     
 }
 
+/*
+    Contrato que contém toda a lógica que rege o negócio
+    LudiEx (Ludicoin Exchange)
+*/
 contract LudiEx {
     
+    // Endereço do criador do contrato
     address public admin;
+    // Nome da organização ou entidade que está utilizando o Ludicoin
     string public nomeEntidade;
+    // Endereço do contrato de Ludicoin
     address public ludicoin;
+    
+    /*
+        Definição das estruturas que descrevem as entidades do domínio
+    */
     
     struct Aluno {
         string nomeCompleto;
@@ -216,7 +257,9 @@ contract LudiEx {
         uint data;
     }
     
-    
+    /*
+        Listas que guardam os dados das entidades do domínio
+    */
     
     mapping(address => Aluno) alunos;
     address[] alunoIndice;
@@ -250,6 +293,9 @@ contract LudiEx {
         ludicoin = _ludicoin;
     }
     
+    /*
+        A partir daqui tem-se os métodos que fazem o CRUD das entidades do domínio
+    */
     
     //INICIO ALUNO
     
@@ -672,7 +718,8 @@ contract LudiEx {
         return somatorio;
     }
     
-    
+    // Gera emite e concede Ludicoins a um aluno quando a nota numa unidade é maior que 10
+    // Os Ludicoins são gerados de acordo com a equivalência entre pontos da disciplina e Ludicoins
     function gerarLudicoins(address aluno, bytes32 atividade, uint novaNota) private {
         bytes32 idTurma = unidades[atividades[atividade].idUnidade].idTurma;
         bytes32 idDisciplina = turmas[idTurma].idDisciplina;
@@ -690,7 +737,7 @@ contract LudiEx {
         
     }
     
-    
+    // 'Gasta' Ludicoins em uma disciplina e os converte em pontos de acordo com a equivalência definida
     function gastarLudicoins(address aluno, bytes32 idUnidade, uint quantidadeLudicoins) public {
         bytes32 idTurma = unidades[idUnidade].idTurma;
         bytes32 idDisciplina = turmas[idTurma].idDisciplina;

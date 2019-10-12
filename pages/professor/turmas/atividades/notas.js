@@ -6,9 +6,12 @@ import LayoutProfessor from '../../../../components/LayoutProfessor';
 import web3 from '../../../../ethereum/web3';
 
 
-
+/*
+    Página que lista e permite atribuir as notas dos alunos em uma dada atividade
+*/
 class NotasAtividade extends Component {
     
+    // Carrega e relaciona Atividade, Aluno e AtividadesRealizadas(notas)
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();

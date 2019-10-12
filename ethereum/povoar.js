@@ -1,3 +1,7 @@
+/*
+    Script para fazer um povoamento automatizado de registros na blockchain.
+*/
+
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledLudicoin = require('./build/Ludicoin.json');
@@ -23,7 +27,7 @@ const deploy = async () => {
 
     const instanciaLudiEx = new web3.eth.Contract (
         JSON.parse(compiledLudiEx.interface),
-        '0x6cd1F3A2E5d81d482b1B894351FD29089eFd8703'
+        '0xC25Da2558a6752154639E8396987773CA22e671A'
     );
 
     //POVOAMENTO RAPIDO

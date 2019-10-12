@@ -1,3 +1,7 @@
+/*
+    Define o provedor web3 a ser utilizado.
+*/
+
 import Web3 from 'web3';
 import { type } from 'os';
 

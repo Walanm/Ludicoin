@@ -6,9 +6,13 @@ import LayoutProfessor from '../../../components/LayoutProfessor';
 import web3 from '../../../ethereum/web3';
 
 
+/*
+    Página que lista todas as turmas criadas
+*/
 
 class MostrarTodasTurmas extends Component {
     
+    // Carrega e relaciona dados das Turmas e Disciplinas
     static async getInitialProps(props) {
         const conta = props.query.endereco;
         const entidade = await ludiex.methods.nomeEntidade().call();
