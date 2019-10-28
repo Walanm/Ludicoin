@@ -1,6 +1,14 @@
 # Ludicoin
 Token de Blockchain para armazenar notas sobressalentes em disciplinas acadêmicas.
 
+## Sobre
+O Ludicoin é um sistema implementado na plataforma de blockchain Ethereum com o objetivo de permitir o acúmulo de pontos sobressalentes nas disciplinas da universidade na forma de tokens, os “Ludicoins”, para serem usados por alunos e professores do ambiente acadêmico. Dentro deste sistema o aluno pode guardar pontos extras que sobrarem em unidades das disciplinas e utilizá-los em unidades posteriores ou em outras disciplinas de professores participantes da rede.
+
+Um aluno será premiado com Ludicoins quando a soma das notas recebidas por prova e atividades, submetidas no sistema por um professor, de uma mesma disciplina, numa mesma turma e numa mesma unidade excederem a nota máxima 10. Depois disso, os alunos poderão utilizar os tokens acumulados em transações por notas em outras matérias. Cada disciplina tem uma equivalência diferente entre pontos e Ludicoins.
+
+## Instruções
+Um manual completo de instalação e utilização se encontra no arquivo Manual_Ludicoin.pdf
+
 ## Guia de pastas
 
 As lista de dependências utilizadas na aplicação encontra-se no arquivo 'package.json'.
